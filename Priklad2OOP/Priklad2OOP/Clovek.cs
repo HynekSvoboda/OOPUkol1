@@ -10,67 +10,53 @@ namespace Priklad2OOP
     class Clovek
     {
         string jmeno;
-        int vek;
-        DateTime narozeni;
+        DateTime narozen;
 
         public Clovek()
         {
-            jmeno = "Default";
-            narozeni = DateTime.Now;
+            this.jmeno = "Default";
+            this.narozen = DateTime.Now;
         }
-        public Clovek(string jmeno, DateTime vek)
+        public Clovek(string jmeno, DateTime narozen)
         {
             this.jmeno = jmeno;
-            narozeni= vek;
+            this.narozen = Convert.ToDateTime(narozen);
         }
         public void NastavJmeno(string jmeno)
         {
              this.jmeno = jmeno;
         }
-        public string VypisJmeno(string jmeno)
+        public string VypisJmeno()
         {
-            return this.jmeno=jmeno;
+            return jmeno;
         }
-        public int Vek(DateTime vek)
+        public int Vek()
         {
-            TimeSpan rozdil =  DateTime.Now-narozeni;
-            double roky = rozdil.TotalDays;
-            roky /= 365.25;
-            this.vek=Convert.ToInt32(roky);
-            return this.vek;
+            TimeSpan rozdil =  DateTime.Now-narozen;
+            double roky =(rozdil.TotalDays)/365.25;
+            //MessageBox.Show(roky.ToString());
+            return Convert.ToInt32(roky);
         }
         public bool Plnolety()
         {
-            if (Vek(narozeni)>=18)
-            {
-                return true;
-            }
+            if (Vek()>=18) return true;
             else return false;
         }
-        public void Starsi(string jmeno2,DateTime datum2)
+        public string Starsi(Clovek clovek2)
         {
-            TimeSpan rozdil = DateTime.Now - datum2;
-            double roky = rozdil.TotalDays;
-            roky /= 365.25;
-            int staric2 = Convert.ToInt32(roky);
-            if(staric2>vek)
+            if (this.Vek() < clovek2.Vek())
             {
-                MessageBox.Show( "Starsi je: " + jmeno2);
+                return "Starší je: " + clovek2.VypisJmeno();
             }
-            else MessageBox.Show( "Starsi je: "+jmeno);
+            else return "Starší je: " + this.VypisJmeno();
         }
         public override string ToString()
         {
-            if (vek > 18)
+            if(this.Plnolety())
             {
-                MessageBox.Show(jmeno + " a má: " + vek.ToString() + " a je plnoletý/á");
-                return jmeno + " a má: " + vek.ToString() + " a je plnoletý/á";
+                return this.VypisJmeno() + " má " + this.Vek() + " a je plnoletý/á.";
             }
-            else
-            {
-                MessageBox.Show(jmeno + " a má: " + vek.ToString() + " a není plnoletý/á");
-                return jmeno + " a má: " + vek.ToString() + " a není plnoletý/á";
-            }
+            else return this.VypisJmeno() + " má " + this.Vek() + " a není plnoletý/á.";
         }
     }
 }
