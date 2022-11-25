@@ -1,0 +1,11 @@
+G:\prg\Priklad2OOP\Priklad2OOP\bin\Debug\Priklad2OOP.exe.config
+G:\prg\Priklad2OOP\Priklad2OOP\bin\Debug\Priklad2OOP.exe
+G:\prg\Priklad2OOP\Priklad2OOP\bin\Debug\Priklad2OOP.pdb
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.Form1.resources
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.Properties.Resources.resources
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.csproj.GenerateResource.cache
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.csproj.CoreCompileInputs.cache
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.exe
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.pdb
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.csproj.AssemblyReference.cache
+G:\prg\Priklad2OOP\Priklad2OOP\obj\Debug\Priklad2OOP.csproj.SuggestedBindingRedirects.cache
